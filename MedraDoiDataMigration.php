@@ -31,11 +31,19 @@ class MedraDoiDataMigration extends Migration
      */
     public function up(): void
     {
+        $file = '/home/bozana/pkp/ojs-stable2/debug.txt';
+        $current = file_get_contents($file);
+        $current .= print_r("++++ MedraDoiDataMigration up ++++\n", true);
+        file_put_contents($file, $current);
         $this->migrateMedraSettings();
     }
 
     public function migrateMedraSettings(): void
     {
+        $file = '/home/bozana/pkp/ojs-stable2/debug.txt';
+        $current = file_get_contents($file);
+        $current .= print_r("++++ MedraDoiDataMigration migrateMedraSettings ++++\n", true);
+        file_put_contents($file, $current);
         // ===== Filters ===== //
         // Old filters should not be there in 3.4 but
         // for a case there are, remove them.
