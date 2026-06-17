@@ -268,7 +268,7 @@ class ArticleMedraXmlFilter extends O4DOIXmlFilter
         $journalLocalePrecedence = $this->getObjectLocalePrecedence($context, null, null);
 
         // Serial Publication (mandatory)
-        $articleNode->appendChild($this->createSerialPublicationNode($doc, $journalLocalePrecedence, $epubFormat));
+        $articleNode->appendChild($this->createSerialPublicationNode($doc, $journalLocalePrecedence, $epubFormat, $issue));
 
         // Journal Issue (mandatory)
         $articleNode->appendChild($this->createJournalIssueNode($doc, $issue, $journalLocalePrecedence));
